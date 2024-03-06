@@ -1,0 +1,258 @@
+/*==========================================================================
+Root
+==========================================================================*/
+
+:root {
+    --background-color: #ffe4c4;
+    --accent1-color: #7699AA;
+    --textcolor: #282015;
+    --fonthead: "Besley";
+    --fonttext: "Noto Sans";
+}
+
+/*==========================================================================
+Fonts
+==========================================================================*/
+
+@font-face {
+    font-family: 'Besley';
+    src: local('Besley Regular'), local('Besley-Regular'),
+        url('../fonts/Besley-Regular.woff2') format('woff2'),
+        url('../fonts/Besley-Regular.woff') format('woff'),
+        url('../fonts/Besley-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../fonts/Noto_Sans/static/NotoSans-Medium.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*==========================================================================
+General
+==========================================================================*/
+
+body,
+html {
+    color: var(--textcolor);
+    background-color: var(--background-color);
+    text-align: center;
+    scroll-behavior: smooth;
+    -ms-scroll-chaining: none;
+    overscroll-behavior: none;
+    font-family: var(--fonttext);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--textcolor);
+    font-family: var(--fonttext);
+}
+
+h1 {
+    font-family: var(--fonthead);
+}
+
+iframe {
+    width: 80vw;
+}
+
+/*==========================================================================
+Mainpage Menu and Header
+==========================================================================*/
+
+header {
+    display: grid;
+    background-color: bisque;
+    grid-template-columns: 1fr;
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    top: 0;
+    transition: top 1s;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    list-style: none;
+    justify-content: space-evenly;
+    margin-left: -20px;
+}
+
+nav a {
+    margin: 0.3rem;
+}
+
+main {
+    margin-top: 300px;
+}
+
+/*==========================================================================
+Slider Gallery
+==========================================================================*/
+
+.slider {
+    margin: 0 auto;
+    max-width: 940px;
+}
+
+.slide_viewer {
+    height: 340px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide_group {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.slide:nth-of-type(1) {
+    background-image: url(../img/Bearbeitet/Glas.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: block;
+}
+
+.slide:nth-of-type(2) {
+    background-image: url(../img/Bearbeitet/Schiff.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.slide:nth-of-type(3) {
+    background-image: url(../img/Bearbeitet/Schmuckkasten.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.slide:nth-of-type(4) {
+    background-image: url(../img/Bearbeitet/Schreibmaschine.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.slide:nth-of-type(5) {
+    background-image: url(../img/Bearbeitet/Tischservice.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.slide:nth-of-type(6) {
+    background-image: url(../img/Bearbeitet/Statuette.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.slide:nth-of-type(7) {
+    background-image: url(../img/Bearbeitet/Kasten_Kerzenhalter.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.slide:nth-of-type(8) {
+    background-image: url(../img/Bearbeitet/Lampe.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.slide_buttons {
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+
+a.slide_btn {
+    color: #474544;
+    font-size: 42px;
+    margin: 0 0.175em;
+    transition: all 0.4s ease-in-out;
+}
+
+.slide_btn.active {
+    color: #428CC6;
+    cursor: pointer;
+}
+
+.directional_nav {
+    margin: 0 auto;
+    max-width: 940px;
+    position: relative;
+    top: -200px;
+    height: 50px;
+}
+
+.previous_btn {
+    bottom: 0;
+    left: 20px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+}
+
+.next_btn {
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+
+.previous_btn,
+.next_btn {
+    cursor: pointer;
+    height: 65px;
+    width: 65px;
+}
+
+
+/*==========================================================================
+News
+==========================================================================*/
+
+.News {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.card {
+    width: 60vw;
+    background-color: #474544;
+    border: 1rem;
+    height: fit-content;
+    margin: 1rem;
+    padding: 1rem;
+}
+.card h2 {
+    color: #fff;
+}
+
+.card p {
+    color: #fff;
+}
