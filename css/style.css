@@ -52,6 +52,7 @@ a {
     text-decoration: none;
     color: var(--textcolor);
     font-family: var(--fonttext);
+    padding: 0.5rem;
 }
 
 h1 {
@@ -60,6 +61,12 @@ h1 {
 
 iframe {
     width: 80vw;
+}
+
+footer {
+    padding: 2rem;
+    width: max-content;
+    margin: 0 auto;
 }
 
 /*==========================================================================
@@ -255,4 +262,55 @@ News
 
 .card p {
     color: #fff;
+}
+
+/*==========================================================================
+Impressum und Datenschutz
+==========================================================================*/
+
+.impressum {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 5rem;
+    background-color: #474544;
+    width: 60vw;
+    margin: 0 auto;
+    margin-top: 13rem;
+    color: #FFF;
+    border-radius: 1rem;
+}
+
+.impressum a {
+    color: #428CC6;
+}
+
+#ImpressumKontakt {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#ImpressumHaftung {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#ImpressumLinks {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+#ImpressumUrheber {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+#ImpressumDaten {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+#ImpressumFoot {
+    grid-column: 2;
+    grid-row: 6;
 }
